@@ -26,5 +26,9 @@ public final class SearchCriteria {
         POWER_CONSUMPTION, NUMBER_OF_SPEAKERS, FREQUENCY_RANGE, CORD_LENGTH
     }
 
+    public static enum Teapot{
+        POWER_CONSUMPTION, WEIGHT, CAPACITY, MATERIAL, COLOR
+    }
+
     private SearchCriteria() {}
 }

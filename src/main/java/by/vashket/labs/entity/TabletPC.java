@@ -2,7 +2,7 @@ package by.vashket.labs.entity;
 
 import java.util.ArrayList;
 
-public class TabletPC extends Appliance{
+public class TabletPC extends Appliance {
     private int batteryCapacity;
     private int displayInches;
     private int memoryRom;
@@ -44,7 +44,7 @@ public class TabletPC extends Appliance{
         );
     }
 
-    public Object getFieldByName(String name){
+    public Object getFieldByName(String name) {
         return switch (name) {
             case "BATTERY_CAPACITY" -> batteryCapacity;
             case "DISPLAY_INCHES" -> displayInches;

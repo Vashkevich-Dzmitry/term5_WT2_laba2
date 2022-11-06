@@ -6,11 +6,10 @@ import by.vashket.labs.entity.Appliance;
 
 public class PrintApplianceInfo {
 
-    public static void print(List<Appliance> appliance) {
-        // you may add your own code here
-
+    public static void print(List<Appliance> appliances) {
+        for (Appliance appliance : appliances) {
+            System.out.println(appliance.toString());
+        }
     }
-
-    // you may add your own code here
 
 }

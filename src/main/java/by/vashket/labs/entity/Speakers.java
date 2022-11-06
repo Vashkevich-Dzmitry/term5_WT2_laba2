@@ -2,7 +2,7 @@ package by.vashket.labs.entity;
 
 import java.util.ArrayList;
 
-public class Speakers extends Appliance{
+public class Speakers extends Appliance {
     private int powerConsumption;
     private int numberOfSpeakers;
     private int frequencyRange;
@@ -40,7 +40,7 @@ public class Speakers extends Appliance{
         );
     }
 
-    public Object getFieldByName(String name){
+    public Object getFieldByName(String name) {
         return switch (name) {
             case "POWER_CONSUMPTION" -> powerConsumption;
             case "NUMBER_OF_SPEAKERS" -> numberOfSpeakers;

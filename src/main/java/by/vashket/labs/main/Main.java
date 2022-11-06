@@ -21,35 +21,17 @@ public class Main {
 
         //////////////////////////////////////////////////////////////////
 
-        Criteria criteriaOven = new Criteria(Oven.class.getSimpleName());//"Oven"
-        criteriaOven.add(Oven.CAPACITY.toString(), 3);
+        Criteria criteriaTeapot = new Criteria(Teapot.class.getSimpleName());//"Oven"
 
-        appliances = service.find(criteriaOven);
+        appliances = service.find(criteriaTeapot);
 
-        PrintApplianceInfo.print(appliances);
-
-        //////////////////////////////////////////////////////////////////
-
-        criteriaOven = new Criteria(Oven.class.getSimpleName());
-        criteriaOven.add(Oven.HEIGHT.toString(), 200);
-        criteriaOven.add(Oven.DEPTH.toString(), 300);
-
-        appliances = service.find(criteriaOven);
-
-        PrintApplianceInfo.print(appliances);
+        PrintApplianceInfo.print(appliances); //чайники
 
         //////////////////////////////////////////////////////////////////
 
-        Criteria criteriaTabletPC = new Criteria(TabletPC.class.getSimpleName());
-        criteriaTabletPC.add(TabletPC.COLOR.toString(), "BLUE");
-        criteriaTabletPC.add(TabletPC.DISPLAY_INCHES.toString(), 14);
-        criteriaTabletPC.add(TabletPC.MEMORY_ROM.toString(), 4);
 
 
-        appliances = service.find(criteriaOven);// find(Object...obj)
-
-
-        PrintApplianceInfo.print(appliances);
+        //PrintApplianceInfo.print(appliances);
 
     }
 

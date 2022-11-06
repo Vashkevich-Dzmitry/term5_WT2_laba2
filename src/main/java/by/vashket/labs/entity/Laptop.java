@@ -5,7 +5,7 @@ import by.vashket.labs.entity.criteria.Criteria;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class Laptop extends Appliance{
+public class Laptop extends Appliance {
     private int batteryCapacity;
     private int os;
     private int memoryRom;
@@ -35,7 +35,7 @@ public class Laptop extends Appliance{
         );
     }
 
-    public Object getFieldByName(String name){
+    public Object getFieldByName(String name) {
         return switch (name) {
             case "BATTERY_CAPACITY" -> batteryCapacity;
             case "OS" -> os;

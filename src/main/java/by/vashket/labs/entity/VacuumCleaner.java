@@ -2,7 +2,7 @@ package by.vashket.labs.entity;
 
 import java.util.ArrayList;
 
-public class VacuumCleaner extends Appliance{
+public class VacuumCleaner extends Appliance {
     private int powerConsumption;
     private String filterType;
     private String bagType;
@@ -32,7 +32,7 @@ public class VacuumCleaner extends Appliance{
         );
     }
 
-    public Object getFieldByName(String name){
+    public Object getFieldByName(String name) {
         return switch (name) {
             case "POWER_CONSUMPTION" -> powerConsumption;
             case "FILTER_TYPE" -> filterType;

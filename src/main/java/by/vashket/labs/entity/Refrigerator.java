@@ -2,7 +2,7 @@ package by.vashket.labs.entity;
 
 import java.util.ArrayList;
 
-public class Refrigerator extends Appliance{
+public class Refrigerator extends Appliance {
     private int powerConsumption;
     private int weight;
     private int freezerCapacity;
@@ -32,7 +32,7 @@ public class Refrigerator extends Appliance{
         );
     }
 
-    public Object getFieldByName(String name){
+    public Object getFieldByName(String name) {
         return switch (name) {
             case "POWER_CONSUMPTION" -> powerConsumption;
             case "WEIGHT" -> weight;
