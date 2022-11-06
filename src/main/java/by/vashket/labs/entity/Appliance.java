@@ -1,5 +1,16 @@
 package by.vashket.labs.entity;
 
 public class Appliance {
-    // you may add your own code here
+
+    private int price;
+
+    public Object getFieldByName(String name){return null;}
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
 }
