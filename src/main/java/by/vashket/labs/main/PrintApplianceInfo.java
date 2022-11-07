@@ -7,8 +7,12 @@ import by.vashket.labs.entity.Appliance;
 public class PrintApplianceInfo {
 
     public static void print(List<Appliance> appliances) {
-        for (Appliance appliance : appliances) {
-            System.out.println(appliance.toString());
+        if (appliances.size() > 0) {
+            for (Appliance appliance : appliances) {
+                System.out.println(appliance.toString());
+            }
+        } else {
+            System.out.println("There are no required appliances");
         }
     }
 

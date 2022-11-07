@@ -10,7 +10,6 @@ public class Criteria {
 
     public Criteria() {
     }
-
     public Criteria(String groupSearchName) {
         this.groupSearchName = groupSearchName;
     }
@@ -18,7 +17,9 @@ public class Criteria {
     public String getGroupSearchName() {
         return groupSearchName;
     }
-
+    public Map<String, Object> getCriteria() {
+        return criteria;
+    }
     public void add(String searchCriteria, Object value) {
         criteria.put(searchCriteria, value);
     }

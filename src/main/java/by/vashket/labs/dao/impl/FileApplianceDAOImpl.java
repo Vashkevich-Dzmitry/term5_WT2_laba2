@@ -2,7 +2,7 @@ package by.vashket.labs.dao.impl;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.util.List;
+import java.util.ArrayList;
 
 import by.vashket.labs.dao.ApplianceDAO;
 import by.vashket.labs.dao.DAOException;
@@ -12,7 +12,7 @@ import by.vashket.labs.entity.criteria.Criteria;
 public class FileApplianceDAOImpl implements ApplianceDAO{
 
     @Override
-    public List<Appliance> find(Criteria criteria) throws DAOException {
+    public ArrayList<Appliance> find(Criteria criteria) throws DAOException {
         FileReader reader;
 
         try {
