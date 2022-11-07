@@ -21,16 +21,18 @@ public class Main {
 
         //////////////////////////////////////////////////////////////////
 
-        Criteria criteriaTeapot = new Criteria(Teapot.class.getSimpleName());//"Oven"
+        Criteria criteriaTeapot = new Criteria(Teapot.class.getSimpleName());
 
         appliances = service.find(criteriaTeapot);
 
+        System.out.println("Teapots:");
         PrintApplianceInfo.print(appliances); //чайники
 
         //////////////////////////////////////////////////////////////////
 
         appliances = new ArrayList<>(Collections.singletonList(service.findLowestCostAppliance()));
 
+        System.out.println("The lowest price:");
         PrintApplianceInfo.print(appliances); //самый дешевый товар
 
     }

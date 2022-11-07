@@ -17,20 +17,6 @@ public class Teapot extends Appliance {
         this.setPrice(price);
     }
 
-    public static ArrayList<Teapot> createInstances(ArrayList<ArrayList<String>> params) {
-        ArrayList<Teapot> appliances = new ArrayList<>();
-        for (ArrayList<String> currParams : params) {
-            appliances.add(new Teapot(
-                    Integer.parseInt(currParams.get(0)),
-                    Integer.parseInt(currParams.get(1)),
-                    currParams.get(2),
-                    currParams.get(3),
-                    Integer.parseInt(currParams.get(4))
-            ));
-        }
-        return appliances;
-    }
-
     public static Teapot createInstance(ArrayList<String> params) {
         return new Teapot(
                 Integer.parseInt(params.get(0)),
@@ -54,7 +40,7 @@ public class Teapot extends Appliance {
 
     @Override
     public String toString() {
-        return "TabletPC{" +
+        return "Teapot{" +
                 "powerConsumption=" + powerConsumption +
                 ", capacity=" + capacity +
                 ", material='" + material + '\'' +

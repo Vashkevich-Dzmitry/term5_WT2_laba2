@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Speakers extends Appliance {
     private int powerConsumption;
     private int numberOfSpeakers;
-    private int frequencyRange;
+    private String frequencyRange;
     private int cordLength;
 
-    public Speakers(int powerConsumption, int numberOfSpeakers, int frequencyRange, int cordLength, int price) {
+    public Speakers(int powerConsumption, int numberOfSpeakers, String frequencyRange, int cordLength, int price) {
         this.powerConsumption = powerConsumption;
         this.numberOfSpeakers = numberOfSpeakers;
         this.frequencyRange = frequencyRange;
@@ -16,25 +16,11 @@ public class Speakers extends Appliance {
         this.setPrice(price);
     }
 
-    public static ArrayList<Speakers> createInstances(ArrayList<ArrayList<String>> params) {
-        ArrayList<Speakers> appliances = new ArrayList<>();
-        for (ArrayList<String> currParams : params) {
-            appliances.add(new Speakers(
-                    Integer.parseInt(currParams.get(0)),
-                    Integer.parseInt(currParams.get(1)),
-                    Integer.parseInt(currParams.get(2)),
-                    Integer.parseInt(currParams.get(3)),
-                    Integer.parseInt(currParams.get(4))
-            ));
-        }
-        return appliances;
-    }
-
     public static Speakers createInstance(ArrayList<String> params) {
         return new Speakers(
                 Integer.parseInt(params.get(0)),
                 Integer.parseInt(params.get(1)),
-                Integer.parseInt(params.get(2)),
+                params.get(2),
                 Integer.parseInt(params.get(3)),
                 Integer.parseInt(params.get(4))
         );
@@ -56,7 +42,7 @@ public class Speakers extends Appliance {
         return "Speakers{" +
                 "powerConsumption=" + powerConsumption +
                 ", numberOfSpeakers=" + numberOfSpeakers +
-                ", frequencyRange=" + frequencyRange +
+                ", frequencyRange='" + frequencyRange + "'" +
                 ", cordLength=" + cordLength +
                 ", price=" + getPrice() +
                 '}';
@@ -70,7 +56,7 @@ public class Speakers extends Appliance {
         return numberOfSpeakers;
     }
 
-    public int getFrequencyRange() {
+    public String getFrequencyRange() {
         return frequencyRange;
     }
 
@@ -86,7 +72,7 @@ public class Speakers extends Appliance {
         this.numberOfSpeakers = numberOfSpeakers;
     }
 
-    public void setFrequencyRange(int frequencyRange) {
+    public void setFrequencyRange(String frequencyRange) {
         this.frequencyRange = frequencyRange;
     }
 

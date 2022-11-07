@@ -18,21 +18,6 @@ public class TabletPC extends Appliance {
         this.setPrice(price);
     }
 
-    public static ArrayList<TabletPC> createInstances(ArrayList<ArrayList<String>> params) {
-        ArrayList<TabletPC> appliances = new ArrayList<>();
-        for (ArrayList<String> currParams : params) {
-            appliances.add(new TabletPC(
-                    Integer.parseInt(currParams.get(0)),
-                    Integer.parseInt(currParams.get(1)),
-                    Integer.parseInt(currParams.get(2)),
-                    Integer.parseInt(currParams.get(3)),
-                    currParams.get(4),
-                    Integer.parseInt(currParams.get(5))
-            ));
-        }
-        return appliances;
-    }
-
     public static TabletPC createInstance(ArrayList<String> params) {
         return new TabletPC(
                 Integer.parseInt(params.get(0)),

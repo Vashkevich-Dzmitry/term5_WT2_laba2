@@ -7,13 +7,13 @@ import java.util.Map;
 
 public class Laptop extends Appliance {
     private int batteryCapacity;
-    private int os;
+    private String os;
     private int memoryRom;
     private int systemMemory;
     private int cpu;
     private int displayInches;
 
-    public Laptop(int batteryCapacity, int os, int memoryRom, int systemMemory, int cpu, int displayInches, int price) {
+    public Laptop(int batteryCapacity, String os, int memoryRom, int systemMemory, int cpu, int displayInches, int price) {
         this.batteryCapacity = batteryCapacity;
         this.os = os;
         this.memoryRom = memoryRom;
@@ -26,7 +26,7 @@ public class Laptop extends Appliance {
     public static Laptop createInstance(ArrayList<String> params) {
         return new Laptop(
                 Integer.parseInt(params.get(0)),
-                Integer.parseInt(params.get(1)),
+                params.get(1),
                 Integer.parseInt(params.get(2)),
                 Integer.parseInt(params.get(3)),
                 Integer.parseInt(params.get(4)),
@@ -42,7 +42,7 @@ public class Laptop extends Appliance {
             case "MEMORY_ROM" -> memoryRom;
             case "SYSTEM_MEMORY" -> systemMemory;
             case "CPU" -> cpu;
-            case "DISPLAY_INCHS" -> displayInches;
+            case "DISPLAY_INCHES" -> displayInches;
             case "PRICE" -> getPrice();
             default -> null;
         };
@@ -52,7 +52,7 @@ public class Laptop extends Appliance {
     public String toString() {
         return "Laptop{" +
                 "batteryCapacity=" + batteryCapacity +
-                ", os=" + os +
+                ", os='" + os + "'" +
                 ", memoryRom=" + memoryRom +
                 ", systemMemory=" + systemMemory +
                 ", cpu=" + cpu +
@@ -65,7 +65,7 @@ public class Laptop extends Appliance {
         return batteryCapacity;
     }
 
-    public int getOs() {
+    public String getOs() {
         return os;
     }
 
@@ -89,7 +89,7 @@ public class Laptop extends Appliance {
         this.batteryCapacity = batteryCapacity;
     }
 
-    public void setOs(int os) {
+    public void setOs(String os) {
         this.os = os;
     }
 
