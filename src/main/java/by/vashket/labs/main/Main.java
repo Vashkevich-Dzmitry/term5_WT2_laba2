@@ -2,11 +2,11 @@ package by.vashket.labs.main;
 
 import static by.vashket.labs.entity.criteria.SearchCriteria.*;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import by.vashket.labs.entity.Appliance;
 import by.vashket.labs.entity.criteria.Criteria;
-import by.vashket.labs.entity.criteria.SearchCriteria;
 import by.vashket.labs.service.ApplianceService;
 import by.vashket.labs.service.ServiceException;
 import by.vashket.labs.service.ServiceFactory;
@@ -14,7 +14,7 @@ import by.vashket.labs.service.ServiceFactory;
 public class Main {
 
     public static void main(String[] args) throws ServiceException {
-        List<Appliance> appliances;
+        ArrayList<Appliance> appliances;
 
         ServiceFactory factory = ServiceFactory.getInstance();
         ApplianceService service = factory.getApplianceService();
@@ -29,9 +29,9 @@ public class Main {
 
         //////////////////////////////////////////////////////////////////
 
+        appliances = new ArrayList<>(Collections.singletonList(service.findLowestCostAppliance()));
 
-
-        //PrintApplianceInfo.print(appliances);
+        PrintApplianceInfo.print(appliances); //самый дешевый товар
 
     }
 

@@ -1,12 +1,14 @@
 package by.vashket.labs.service;
 
-import java.util.List;
+import java.util.ArrayList;
 
 import by.vashket.labs.entity.Appliance;
 import by.vashket.labs.entity.criteria.Criteria;
 
 public interface ApplianceService {
 
-    List<Appliance> find(Criteria criteria) throws ServiceException;
+    ArrayList<Appliance> find(Criteria criteria) throws ServiceException;
+
+    Appliance findLowestCostAppliance() throws ServiceException;
 
 }
